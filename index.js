@@ -32,6 +32,11 @@ console.log(client.commands)
 client.once(Events.ClientReady, c => {
 	console.log(`Pronto! Realizado como ${c.user.tag}`)
 })
-
-// Log in to Discord with your client's token
 client.login(TOKEN)
+
+//Listener interações com o bot
+
+client.on(Events.InteractionCreate, interation =>{
+	if(!interaction.isChatInputCommand()) return 
+
+})
